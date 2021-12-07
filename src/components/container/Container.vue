@@ -1,6 +1,6 @@
 <template>
   <section :class="['me-container', { 'is-vertical': isVertical }]">
-    <slot></slot>
+    <slot />
   </section>
 </template>
 
@@ -14,7 +14,7 @@ export default {
 import { useSlots, computed, VNode, Component } from 'vue'
 
 interface Props {
-  direction?: String
+  direction?: string
 }
 
 const props = defineProps<Props>()

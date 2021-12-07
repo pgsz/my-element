@@ -5,20 +5,24 @@
     <me-footer>Footer</me-footer>
   </me-container>
 
-  <hr />
+  <hr>
 
   <me-container>
     <me-header>Header</me-header>
     <me-container>
-      <me-aside width="200px">Aside</me-aside>
+      <me-aside width="200px">
+        Aside
+      </me-aside>
       <me-main>Main</me-main>
     </me-container>
   </me-container>
 
-  <hr />
+  <hr>
 
   <me-container>
-    <me-aside width="200px">Aside</me-aside>
+    <me-aside width="200px">
+      Aside
+    </me-aside>
     <me-container>
       <me-header>Header</me-header>
       <me-main>Main</me-main>
@@ -26,7 +30,8 @@
     </me-container>
   </me-container>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 <style lang="scss" scoped>
 hr {
   margin: 16px 0;

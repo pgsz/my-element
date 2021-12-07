@@ -1,6 +1,9 @@
 <template>
-  <aside class="me-aside" :style="{ width }">
-    <slot></slot>
+  <aside
+    class="me-aside"
+    :style="{ width }"
+  >
+    <slot />
   </aside>
 </template>
 

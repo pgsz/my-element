@@ -1,6 +1,9 @@
 <template>
-  <header class="me-header" :style="{ height }">
-    <slot></slot>
+  <header
+    class="me-header"
+    :style="{ height }"
+  >
+    <slot />
   </header>
 </template>
 
