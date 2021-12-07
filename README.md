@@ -61,3 +61,40 @@ if (!commitRE.test(msg)) {
 ```shell
 npx husky add .husky/pre-commit "npm run lint"
 ```
+
+## eslint
+
+```shell
+npm install -D eslint typescript
+
+npm install -D  eslint-plugin-vue @vue/eslint-config-typescript
+
+npm install -D @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+
+在 `package.json` 文件的 `scripts` 添加 `lint` 命令：
+```json
+"lint": "eslint --fix --ext .js,vue src/"
+```
+
+在根目录下添加 `.eslintrc.js` 文件
+```js
+module.exports = {
+  root: true,
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+    // https://eslint.vuejs.org/user-guide/#faq
+    'vue/setup-compiler-macros': true
+  },
+  extends: [
+    'plugin:vue/vue3-recommended',
+    'eslint:recommended',
+    '@vue/typescript/recommended'
+  ],
+  parserOptions: {
+    ecmaVersion: 2021,
+  }
+}
+```
