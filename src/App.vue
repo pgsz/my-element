@@ -1,69 +1,32 @@
 <template>
-  <me-container>
-    <me-header>Header</me-header>
-    <me-main>Main</me-main>
-    <me-footer>Footer</me-footer>
-  </me-container>
-
-  <hr>
-
-  <me-container>
-    <me-header>Header</me-header>
-    <me-container>
-      <me-aside width="200px">
-        Aside
-      </me-aside>
-      <me-main>Main</me-main>
-    </me-container>
-  </me-container>
-
-  <hr>
-
-  <me-container>
-    <me-aside width="200px">
-      Aside
-    </me-aside>
-    <me-container>
-      <me-header>Header</me-header>
-      <me-main>Main</me-main>
-      <me-footer>Footer</me-footer>
-    </me-container>
-  </me-container>
+  <router-view />
 </template>
-<script setup lang="ts">
-</script>
-<style lang="scss" scoped>
-hr {
-  margin: 16px 0;
-}
-.me-header,
-.me-footer {
-  background-color: #b3c0d1;
-  color: #333;
-  text-align: center;
-  line-height: 60px;
-}
 
-.me-aside {
-  background-color: #d3dce6;
-  color: #333;
-  text-align: center;
-  line-height: 200px;
+<style lang="scss">
+#app {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  overflow: auto;
 }
-
-.me-main {
-  background-color: #e9eef3;
-  color: #333;
-  text-align: center;
-  line-height: 160px;
-}
-
-.me-container:nth-child(5) .me-aside,
-.me-container:nth-child(6) .me-aside {
-  line-height: 260px;
-}
-
-.me-container:nth-child(7) .me-aside {
-  line-height: 320px;
+body,
+#app {
+  &::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 10px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #535353;
+  }
+  &::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background: #808080;
+  }
 }
 </style>
