@@ -29,7 +29,7 @@ const props = withDefaults(defineProps<Props>(), {
 const globalConfig = useGlobalConfig()
 
 const buttonSize = computed(() => {
-  return props.size || globalConfig
+  return props.size || globalConfig.size
 })
 </script>
 <style lang="scss" scoped>

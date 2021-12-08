@@ -1,5 +1,5 @@
 function sayHello(name, fn) {
-  if (name == '大圣') {
+  if (name == 'pg') {
     fn()
   }
 }
@@ -8,9 +8,6 @@ test('测试加法', () => {
 })
 test('测试函数', () => {
   const fn = jest.fn()
-  sayHello('大圣', fn)
+  sayHello('pg', fn)
   expect(fn).toHaveBeenCalled()
-})
-test('随便测试', () => {
-  console.log(123)
 })

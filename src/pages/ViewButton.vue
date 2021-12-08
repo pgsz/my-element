@@ -8,7 +8,7 @@
   <pg-button type="danger">
     危险按钮
   </pg-button>
-  <pg-button>默认按钮</pg-button>
+  <pg-button>大型按钮</pg-button>
   <pg-button size="medium">
     中型按钮
   </pg-button>
