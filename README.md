@@ -98,3 +98,52 @@ module.exports = {
   }
 }
 ```
+
+## jest 单元测试
+
+```shell
+# 测试 Vue 组件必备的库 
+npm install -D jest@26 vue-jest@next @vue/test-utils@next 
+# 安装 babel 库
+npm install -D babel-jest@26 @babel/core @babel/preset-env 
+# 安装 Jest 适配 TypeScript 的库
+npm install -D ts-jest@26 @babel/preset-typescript @types/jest
+```
+
+根目录下新建 `babel.config.js` 文件，添加如下配置，让 babel 解析到 Node 和 TypeScript 环境
+
+```js
+module.exports = {
+  presets: [
+    ['@babel/preset-env', { targets: { node: 'current' } }],
+    '@babel/preset-typescript',
+  ],
+}
+```
+
+跟目录下新建 `jest.config.js` 文件，配置 jest 的测试行为，不同格式的文件需要使用不同命令来配置：
+
+- .vue 文件：使用 vue-jest
+- .js 或 .jsx 文件：使用 babel-jest
+- .ts 文件：使用 ts-jest；匹配文件名是 xx.spec.js；注意：Jest 只会执行 .spec.js 结尾的文件
+
+```js
+module.exports = {
+  transform: {
+    // .vue文件用 vue-jest 处理
+    '^.+\\.vue$': 'vue-jest',
+    // .js或者.jsx用 babel-jest处理
+    '^.+\\.jsx?$': 'babel-jest', 
+    //.ts文件用ts-jest处理
+    '^.+\\.ts$': 'ts-jest'
+  },
+  testMatch: ['**/?(*.)+(spec).[jt]s?(x)']
+}
+```
+
+在 `package.json` 中的 scripts 新增 test 命令
+
+```json
+"test": "jest"
+```
+
