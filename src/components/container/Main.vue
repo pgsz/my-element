@@ -1,12 +1,12 @@
 <template>
-  <main class="me-main">
+  <main class="pg-main">
     <slot />
   </main>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'MeMain',
+  name: 'PgMain',
 }
 </script>
 <script setup lang="ts">

@@ -18,7 +18,8 @@ interface peopleObj {
 }
 
 const pageList: peopleObj[] = [
-  { name: 'layout布局', to: 'ShowContainer' },
+  { name: 'layout布局', to: 'ViewContainer' },
+  { name: 'button按钮', to: 'ViewButton' },
 ]
 
 const router = useRouter()

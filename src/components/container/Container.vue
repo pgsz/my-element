@@ -1,5 +1,5 @@
 <template>
-  <section :class="['me-container', { 'is-vertical': isVertical }]">
+  <section :class="['pg-container', { 'is-vertical': isVertical }]">
     <slot />
   </section>
 </template>
@@ -7,7 +7,7 @@
 <!-- 两个 script 标签：确保每个组件有自己的名字， script setup 中没发返回组件的名称 -->
 <script lang="ts">
 export default {
-  name: 'MeContainer',
+  name: 'PgContainer',
 }
 </script>
 <script setup lang="ts">
@@ -21,12 +21,12 @@ const props = defineProps<Props>()
 
 const slots = useSlots()
 
-// 手动指定 direction 和 子元素中有 me-header 或 me-footer 的时候是垂直布局
+// 手动指定 direction 和 子元素中有 pg-header 或 pg-footer 的时候是垂直布局
 const isVertical = computed(() => {
   if (slots && slots.default) {
     return slots.default().some((vn: VNode) => {
       const tag = (vn.type as Component).name
-      return tag === 'MeHeader' || tag === "MeFooter"
+      return tag === 'PgHeader' || tag === "PgFooter"
     })
   } else {
     if (props.direction === 'vertical') {

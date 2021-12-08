@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="me-footer"
+    class="pg-footer"
     :style="{ height }"
   >
     <slot />
@@ -9,7 +9,7 @@
 
 <script lang="ts">
 export default {
-  name: 'MeFooter',
+  name: 'PgFooter',
 }
 </script>
 <script setup lang="ts">

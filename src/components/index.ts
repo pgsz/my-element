@@ -1,6 +1,7 @@
 import container from './container'
+import button from './button'
 
-const components = [...container]
+const components = [...container, ...button]
 
 const install = (Vue: any) => {
   components.map(component => {

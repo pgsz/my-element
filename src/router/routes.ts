@@ -1,5 +1,6 @@
-const ShowHome = () => import('../pages/Home.vue')
-const ShowContainer = () => import('../pages/ViewContainer.vue')
+const Home = () => import('../pages/Home.vue')
+const ViewContainer = () => import('../pages/ViewContainer.vue')
+const ViewButton = () => import('../pages/ViewButton.vue')
 
 const routes = [
   {
@@ -8,13 +9,18 @@ const routes = [
   },
   {
     path: '/home',
-    name: 'ShowHome',
-    component: ShowHome,
+    name: 'Home',
+    component: Home,
   },
   {
     path: '/container',
-    name: 'ShowContainer',
-    component: ShowContainer,
+    name: 'ViewContainer',
+    component: ViewContainer,
+  },
+  {
+    path: '/button',
+    name: 'ViewButton',
+    component: ViewButton,
   },
 ]
 

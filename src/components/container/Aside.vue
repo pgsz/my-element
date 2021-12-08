@@ -1,6 +1,6 @@
 <template>
   <aside
-    class="me-aside"
+    class="pg-aside"
     :style="{ width }"
   >
     <slot />
@@ -9,7 +9,7 @@
 
 <script lang="ts">
 export default {
-  name: 'MeAside',
+  name: 'PgAside',
 }
 </script>
 <script setup lang="ts">

@@ -1,6 +1,6 @@
 <template>
   <header
-    class="me-header"
+    class="pg-header"
     :style="{ height }"
   >
     <slot />
@@ -9,7 +9,7 @@
 
 <script lang="ts">
 export default {
-  name: 'MeHeader',
+  name: 'PgHeader',
 }
 </script>
 <script setup lang="ts">
