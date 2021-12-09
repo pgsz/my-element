@@ -1,7 +1,11 @@
 <template>
   <button
     class="pg-button"
-    :class="[buttonSize ? `pg-button--${buttonSize}` : '', type ? `pg-button--${type}` : '']"
+    :class="[
+      buttonSize ? `pg-button--${buttonSize}` : '',
+      type ? `pg-button--${type}` : '',
+      round ? 'is-round' : '',
+    ]"
   >
     <slot />
   </button>
@@ -19,11 +23,13 @@ import { useGlobalConfig } from '../../utils/util'
 interface Props {
   size?: '' | 'small' | 'medium' | 'large'
   type?: '' | 'primary' | 'success' | 'danger'
+  round?: true | false
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: '',
   type: '',
+  round: false,
 })
 
 const globalConfig = useGlobalConfig()
