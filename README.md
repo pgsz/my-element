@@ -144,6 +144,9 @@ module.exports = {
 在 `package.json` 中的 scripts 新增 test 命令
 
 ```json
-"test": "jest"
+"test": "jest",
 ```
 
+## async-validator
+
+目前主流的组件库校验使用的都是 async-validator 库：[github](https://github.com/yiminghe/async-validator)
